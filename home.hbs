@@ -3,6 +3,11 @@
 
 {{> "components/header" headerStyle=@custom.header_style}}
 
+<section class="home-wave" aria-hidden="true">
+    <div class="wave wave-1"></div>
+    <div class="wave wave-2"></div>
+</section>
+
 {{#match @custom.header_style "!=" "Highlight"}}
     {{> "components/featured" showFeatured=@custom.show_featured_posts limit=4}}
 {{/match}}

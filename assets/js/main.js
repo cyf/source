@@ -58,3 +58,18 @@
         wrapper.appendChild(table);
     });
 })();
+
+/* Sticky nav background toggle */
+(function(){
+    const nav=document.querySelector('.gh-navigation');
+    if(!nav) return;
+    function onScroll(){
+        if(window.scrollY>10){
+            nav.classList.add('is-scrolled');
+        }else{
+            nav.classList.remove('is-scrolled');
+        }
+    }
+    window.addEventListener('scroll',onScroll,{passive:true});
+    onScroll();
+})();
